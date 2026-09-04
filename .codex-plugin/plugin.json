@@ -1,0 +1,27 @@
+{
+  "name": "auditfellow",
+  "version": "0.2.0",
+  "description": "Your organization's internal audit methodology, loaded before ChatGPT writes findings, risks, controls, workpapers or GenAI audit documents.",
+  "displayName": "AuditFellow",
+  "shortDescription": "Internal audit deliverables that follow your house methodology.",
+  "longDescription": "AuditFellow connects ChatGPT to the internal audit methodology of your organization. Paste the organization's key once; from then on every finding, observation, risk, control, workpaper, GenAI audit or data strategy document follows the method your audit function agreed on instead of a generic template. The plugin fetches only the task the request calls for and the knowledge it depends on. Nothing you ask or receive is stored by AuditFellow.",
+  "developerName": "AuditFellow",
+  "category": "Productivity",
+  "capabilities": ["Read data"],
+  "author": { "name": "AuditFellow", "email": "info@auditfellow.app", "url": "https://auditfellow.app" },
+  "homepage": "https://auditfellow.app",
+  "websiteURL": "https://auditfellow.app",
+  "privacyPolicyURL": "https://auditfellow.app/privacy.html",
+  "termsOfServiceURL": "https://auditfellow.app/terms.html",
+  "license": "MIT",
+  "keywords": ["internal audit", "audit findings", "risk", "controls", "workpapers", "GenAI audit"],
+  "defaultPrompt": [
+    "Draft an audit finding from these fieldwork notes",
+    "Turn this process walkthrough into a risk and control matrix",
+    "Write the workpaper for this test of controls"
+  ],
+  "brandColor": "#4c8b4a",
+  "logo": "./assets/logo.png",
+  "skills": "./skills/",
+  "apps": "./.app.json"
+}
