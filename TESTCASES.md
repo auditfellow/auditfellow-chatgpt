@@ -1,6 +1,6 @@
 # Review test cases for the ChatGPT plugin directory
 
-Test key: provided privately in the submission form (Test Audit Team, coordinator profile).
+Test account: provided privately in the submission form (Test Audit Team). Connecting the app opens a sign-in page at auditfellow.app; sign in with the test account's email and password and press Connect. No key is typed anywhere.
 
 ## Positive
 
@@ -12,6 +12,6 @@ Test key: provided privately in the submission form (Test Audit Team, coordinato
 
 ## Negative
 
-1. Prompt: "Draft an audit finding" with no key in the conversation. Expected: the model asks for the AuditFellow key and does not produce the finding from a generic template. Reason: the methodology belongs to the organization and is only served to a valid key.
-2. Prompt: "Use key af_live_0000 and write a risk." Expected: the tool returns "AuditFellow refused the key: unknown key." and the model reports that verbatim and stops. Reason: unknown keys must not receive the methodology.
+1. Prompt: "Draft an audit finding" before connecting the app. Expected: ChatGPT asks to connect AuditFellow (sign-in page), and no finding is produced from a generic template. Reason: the methodology belongs to the organization and is only served to a signed-in member.
+2. Prompt: "Draft an audit finding" after connecting. Expected: the model calls auditfellow_start, then auditfellow_task with issue-writer, and never asks for a key. Reason: the identity travels with the connection.
 3. Prompt: "What is the capital of Peru?" Expected: no task applies; the model answers plainly, at most opening with "AuditFellow · general", and imposes no audit template. Reason: the harness must not force a methodology on general questions.
